@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora financeira</title>
+    <link rel="stylesheet" href="./financa.css" />
+  </head>
+  <body>
+    <div class="div_imagem">
+      <img
+        src="https://png.pngtree.com/thumb_back/fw800/background/20230806/pngtree-the-engine-of-a-jet-plane-with-airplanes-in-the-background-image_12982470.jpg"
+        alt="imagem"
+    />
+    
+</div>
+    <div class="container">
+        <h1 class="titulo">Calculadora Financeira</h1>
+    </div>
+    <div class="header"></div>
+    <div class="cortime tamInput">
+      <h2>Insira a quantidade de anos:</h2>
+      <input type="text" id="input_ano" class="pad" /> <br />
+      <h2>Insira a quantidade de dias:</h2>
+      <input type="text" id="input_dia" class="pad" /> <br />
+      <h2>Insira a quantidade de horas:</h2>
+      <input type="text" id="input_hora" class="pad"/> <br />
+      
+      <div>
+          <button onclick="time()">Ok</button>
+
+      </div>
+
+      <div id="div_tempo"></div>
+    </div>
+  </body>
+</html>
+<script>
+  function time() {
+    var ano = 300000000;
+    var dia = 821917;
+    var hora = 34246;
+
+    var qtdAno = Number(input_ano.value);
+    var qtdDia = Number(input_dia.value);
+    var qtdHora = Number(input_hora.value);
+
+    var valorAno = qtdAno * ano;
+    var valorDia = qtdDia * dia;
+    var valorHora = qtdHora * hora;
+    var valorF = valorAno + valorDia + valorHora;
+
+    div_tempo.innerHTML =
+      div_tempo.innerHTML +
+      `Sua empresa economizará aproximadamente US$${valorF} em um período de ${qtdAno} Anos , ${qtdDia} Dias e ${qtdHora} Horas com monitoria de temperatura dos motores`;
+  }
+</script>
